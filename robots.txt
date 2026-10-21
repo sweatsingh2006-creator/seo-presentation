@@ -1,0 +1,7 @@
+# Robots.txt for Search Engine Optimization Presentation Deck
+# Army Institute of Technology, Pune - Unit IV Presentation
+User-agent: *
+Allow: /
+
+# Canonical Sitemap
+Sitemap: https://seo-unit4.aitpune.edu/sitemap.xml

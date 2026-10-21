@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <style>
+      .bg { fill: #F4F1EA; }
+      .border { stroke: #111111; stroke-width: 3; fill: none; }
+      .accent { fill: #FF4D1F; }
+      .ink { fill: #111111; }
+      .muted { fill: #6B6860; }
+      .mono { font-family: 'Courier New', monospace; font-size: 16px; letter-spacing: 2px; }
+      .serif { font-family: 'Times New Roman', serif; font-size: 80px; font-weight: normal; }
+      .serif-sub { font-family: 'Times New Roman', serif; font-size: 32px; font-style: italic; }
+      .sans { font-family: -apple-system, sans-serif; font-size: 20px; }
+    </style>
+  </defs>
+  
+  <!-- Paper Background -->
+  <rect width="1200" height="630" class="bg"/>
+  
+  <!-- Outer Editorial Rules -->
+  <rect x="40" y="40" width="1120" height="550" class="border"/>
+  <rect x="48" y="48" width="1104" height="534" fill="none" stroke="#111111" stroke-width="1"/>
+  
+  <!-- Header Bar -->
+  <line x1="40" y1="120" x2="1160" y2="120" stroke="#111111" stroke-width="2"/>
+  <text x="70" y="95" class="mono ink">UNIT IV // WEB TECHNOLOGIES &amp; MARKETING</text>
+  <text x="880" y="95" class="mono accent">ARMY INSTITUTE OF TECHNOLOGY, PUNE</text>
+  
+  <!-- Big Display Title -->
+  <text x="70" y="240" class="serif ink">Search Engine</text>
+  <text x="70" y="330" class="serif ink">Optimization</text>
+  <text x="70" y="380" class="serif-sub accent">The Science, Architecture &amp; Mechanics of Algorithmic Retrieval</text>
+  
+  <!-- Bottom Editorial Stamp -->
+  <line x1="70" y1="440" x2="1130" y2="440" stroke="#111111" stroke-width="1" stroke-dasharray="4 4"/>
+  <text x="70" y="500" class="mono muted">CURRICULUM SYLLABUS: CRAWLING · INDEXING · RANKING · ON-PAGE · OFF-PAGE · AUDITING</text>
+  <text x="70" y="535" class="mono ink">ACADEMIC YEAR 2025–2026 // LIVE DEMO + SEO X-RAY INSPECTOR</text>
+  
+  <!-- Stamp Seal Box -->
+  <rect x="940" y="160" width="180" height="180" fill="none" stroke="#FF4D1F" stroke-width="2"/>
+  <rect x="946" y="166" width="168" height="168" fill="none" stroke="#FF4D1F" stroke-width="1" stroke-dasharray="3 3"/>
+  <text x="965" y="220" class="mono accent" font-size="14">AIT PUNE</text>
+  <text x="965" y="255" class="serif ink" font-size="36">SEO</text>
+  <text x="965" y="285" class="mono ink" font-size="12">15 MODULES</text>
+  <text x="965" y="315" class="mono accent" font-size="12">DECK SPEC 4.0</text>
+</svg>

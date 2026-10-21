@@ -1,0 +1,236 @@
+/* ==========================================================================
+   PRESENTATION — SLIDE LAYOUT & SCROLL-SNAP RUNTIME
+   Full-Viewport Sections, Snap Navigation, Projector Responsiveness
+   ========================================================================== */
+
+/* Mandatory Scroll Snapping */
+html.presentation-mode {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  scroll-padding-top: 0;
+}
+
+body.presentation-mode {
+  scroll-snap-type: y mandatory;
+  height: 100%;
+}
+
+/* Presentation Deck Wrapper */
+.presentation-deck {
+  width: 100%;
+  position: relative;
+}
+
+/* Individual Full-Viewport Slide */
+.slide-section {
+  width: 100vw;
+  min-height: 100vh;
+  height: 100vh;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: calc(var(--header-height) + 1.25rem) var(--slide-padding-x) calc(var(--hud-height) + 1.5rem);
+  background-color: var(--paper);
+  border-bottom: 1px solid var(--border-subtle);
+  contain: layout style;
+}
+
+/* Slide Header Bar / Meta Info */
+.slide-top-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-bottom: 1px solid var(--border-subtle);
+  padding-bottom: 0.65rem;
+  margin-bottom: clamp(1rem, 2vh, 2rem);
+  flex-shrink: 0;
+}
+
+.slide-category-tag {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-text);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.slide-category-tag::before {
+  content: "";
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  background-color: var(--accent-text);
+  border-radius: 50%;
+}
+
+.slide-index-label {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-muted);
+  letter-spacing: 0.08em;
+}
+
+/* Slide Main Content Grid Base */
+.slide-content-stage {
+  flex: 1 1 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Slide Footer Meta */
+.slide-bottom-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  border-top: 1px solid var(--border-faint);
+  padding-top: 0.6rem;
+  margin-top: clamp(0.75rem, 1.5vh, 1.5rem);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--ink-faint);
+  flex-shrink: 0;
+}
+
+/* Asymmetric Editorial Grid Helpers */
+.editorial-grid-2col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  width: 100%;
+}
+
+.editorial-grid-asym-left {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  width: 100%;
+}
+
+.editorial-grid-asym-right {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: clamp(1.5rem, 4vw, 4rem);
+  align-items: center;
+  width: 100%;
+}
+
+.editorial-grid-3col {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+  width: 100%;
+}
+
+/* Text Reveal Animation Primitives */
+.reveal-line {
+  overflow: hidden;
+  display: block;
+}
+
+.reveal-inner {
+  display: block;
+  transform: translateY(115%);
+  transition: transform 0.8s var(--ease-editorial);
+  will-change: transform;
+}
+
+.slide-section.is-active .reveal-inner {
+  transform: translateY(0%);
+}
+
+/* Stagger delays */
+.slide-section.is-active .reveal-inner.delay-1 { transition-delay: 0.1s; }
+.slide-section.is-active .reveal-inner.delay-2 { transition-delay: 0.2s; }
+.slide-section.is-active .reveal-inner.delay-3 { transition-delay: 0.3s; }
+.slide-section.is-active .reveal-inner.delay-4 { transition-delay: 0.4s; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .editorial-grid-2col,
+  .editorial-grid-asym-left,
+  .editorial-grid-asym-right {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .slide-section {
+    height: auto;
+    min-height: 100vh;
+    scroll-snap-align: none;
+  }
+}
+
+/* Print Specification (P key or Browser Print) */
+@media print {
+  html, body {
+    scroll-snap-type: none !important;
+    height: auto !important;
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+
+  .editorial-masthead,
+  .presenter-hud,
+  .presentation-progress-bar,
+  .keyboard-hints-chip,
+  .custom-cursor-dot,
+  .custom-cursor-ring,
+  .slide-navigator-modal,
+  .skip-link {
+    display: none !important;
+  }
+
+  .slide-section {
+    height: 100vh !important;
+    min-height: 100vh !important;
+    page-break-after: always !important;
+    break-after: page !important;
+    padding: 2.5rem !important;
+    background: #FFFFFF !important;
+    border-bottom: 2px solid #000 !important;
+  }
+
+  .slide-watermark {
+    color: rgba(0, 0, 0, 0.04) !important;
+  }
+
+  .reveal-inner {
+    transform: none !important;
+  }
+}
+
+/* Respect Prefers-Reduced-Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001s !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001s !important;
+  }
+  
+  .reveal-inner {
+    transform: none !important;
+  }
+  
+  html {
+    scroll-behavior: auto !important;
+  }
+}

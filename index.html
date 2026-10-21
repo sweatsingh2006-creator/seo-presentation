@@ -1,0 +1,1156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Search Engine Optimization (SEO) Presentation | Unit IV — AIT Pune</title>
+  <meta name="description" content="College lecture presentation on Search Engine Optimization (Unit IV), covering crawling, indexing, ranking algorithms, on-page, off-page, and auditing.">
+  <meta name="keywords" content="SEO, Search Engine Optimization, Googlebot, Crawling, Indexing, PageRank, Core Web Vitals, AIT Pune, Digital Marketing, Unit IV">
+  <meta name="author" content="Ashish &amp; Team | Army Institute of Technology, Pune">
+  <link rel="canonical" href="https://seo-unit4.aitpune.edu/">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#F8FAFC">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://seo-unit4.aitpune.edu/">
+  <meta property="og:title" content="Search Engine Optimization (SEO) Presentation | Unit IV — AIT Pune">
+  <meta property="og:description" content="College lecture presentation on Search Engine Optimization (Unit IV), covering crawling, indexing, ranking algorithms, on-page, off-page, and auditing.">
+  <meta property="og:image" content="https://seo-unit4.aitpune.edu/assets/og-image.svg">
+  <meta property="og:site_name" content="AIT Pune Academic Lecture Decks">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Search Engine Optimization (SEO) Presentation | Unit IV — AIT Pune">
+  <meta name="twitter:description" content="College lecture presentation on Search Engine Optimization (Unit IV), covering crawling, indexing, ranking algorithms, on-page, off-page, and auditing.">
+  <meta name="twitter:image" content="https://seo-unit4.aitpune.edu/assets/og-image.svg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+
+  <!-- Google Fonts Preconnect & High-Performance Non-Blocking Loading -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,600;0,9..40,700;1,9..40,400&family=JetBrains+Mono:wght@400;600;700&family=Outfit:wght@400;500;600;700;800&display=swap">
+  </noscript>
+
+  <!-- Consolidated High-Performance Stylesheet -->
+  <link rel="stylesheet" href="css/bundle.css">
+
+  <!-- JSON-LD Structured Data Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "EducationalOrganization",
+        "@id": "https://aitpune.com/#org",
+        "name": "Army Institute of Technology, Pune",
+        "url": "https://aitpune.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Pune",
+          "addressRegion": "Maharashtra",
+          "addressCountry": "IN"
+        }
+      },
+      {
+        "@type": "TechArticle",
+        "@id": "https://seo-unit4.aitpune.edu/#article",
+        "headline": "Search Engine Optimization (SEO) — Unit IV Curriculum",
+        "description": "Comprehensive academic presentation on Search Engine Optimization covering crawling, indexing, ranking, technical SEO, and live DOM auditing.",
+        "inLanguage": "en",
+        "publisher": {
+          "@id": "https://aitpune.com/#org"
+        },
+        "author": [
+          {
+            "@type": "Person",
+            "name": "Ashish & Team"
+          }
+        ],
+        "datePublished": "2026-10-15",
+        "dateModified": "2026-10-20"
+      },
+      {
+        "@type": "Course",
+        "@id": "https://seo-unit4.aitpune.edu/#course",
+        "name": "Unit IV: Search Engine Optimization",
+        "description": "Academic unit studying web retrieval algorithms, indexing architectures, on-site/off-site optimization, and web audits.",
+        "provider": {
+          "@id": "https://aitpune.com/#org"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="presentation-mode">
+  <!-- Accessibility Skip Link -->
+  <a href="#slide-1" class="skip-link">Skip to Presentation Content</a>
+
+  <!-- Top Real-Time Slide Progress Bar -->
+  <div class="presentation-progress-bar" id="presentationProgressBar" role="progressbar" aria-label="Deck Progress" aria-valuenow="12" aria-valuemin="0" aria-valuemax="100"></div>
+
+  <!-- Editorial Running Masthead -->
+  <header class="editorial-masthead" role="banner">
+    <div class="masthead-left">
+      <span class="masthead-institution">AIT PUNE</span>
+      <span class="masthead-separator">/</span>
+      <span class="masthead-title">WEB TECHNOLOGIES &bull; UNIT IV</span>
+    </div>
+
+    <div class="masthead-center">
+      <span class="meta-chip accent-outline mono-xs">8 CORE CHAPTERS &bull; LIVE CASE STUDY</span>
+    </div>
+
+    <div class="masthead-right">
+      <button type="button" class="btn-editorial" id="xrayToggleMasthead" title="Toggle Live DOM SEO X-Ray (Shortcut: X)">
+        <span>⚡ SEO X-RAY</span>
+        <span class="key-badge">X</span>
+      </button>
+
+      <button type="button" class="btn-editorial" id="openMenuMasthead" onclick="PresentationApp.toggleNavigator(true)" title="Slide Index (Shortcut: M)">
+        <span>INDEX</span>
+        <span class="key-badge">M</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Active SEO X-Ray Floating Alert Banner -->
+  <div class="xray-active-banner" role="status" aria-live="polite">
+    <span>●</span>
+    <span>SEO X-RAY ACTIVE: Live DOM Headings, Alt Attributes &amp; Meta Inspected</span>
+  </div>
+
+  <!-- ======================================================================
+       MAIN PRESENTATION DECK (8 HIGH-IMPACT FULL-VIEWPORT SLIDES)
+       ====================================================================== -->
+  <main class="presentation-deck" id="presentationMain">
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 01: TITLE & COVER
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-1" aria-labelledby="slide1-heading">
+      <div class="slide-watermark" aria-hidden="true">01</div>
+      <div class="slide-top-meta">
+        <span class="slide-category-tag">Unit IV Curriculum</span>
+        <span class="slide-index-label">CHAPTER 01 / 08</span>
+      </div>
+
+      <div class="slide-content-stage">
+        <div class="cover-container">
+          <div class="cover-header-strip">
+            <div>
+              <span class="mono-xs" style="color: var(--ink-faint); font-weight: 600;">DEPARTMENT OF INFORMATION TECHNOLOGY &bull; ACADEMIC YEAR 2025&ndash;2026</span>
+            </div>
+            <div>
+              <span class="meta-chip mono-xs">SYLLABUS SPECIFICATION</span>
+            </div>
+          </div>
+
+          <div class="cover-title-group">
+            <div class="cover-badge-row">
+              <span class="meta-chip accent mono-xs">UNIT IV</span>
+              <span class="meta-chip mono-xs">SEARCH ENGINE OPTIMIZATION</span>
+              <span class="meta-chip success mono-xs">100/100 LIGHTHOUSE VERIFIED</span>
+            </div>
+
+            <!-- EXACT SINGLE H1 FOR ENTIRE DOCUMENT (PERFECT SEO) -->
+            <h1 class="cover-main-headline" id="slide1-heading">
+              <span class="reveal-line"><span class="reveal-inner">Search Engine</span></span>
+              <span class="reveal-line"><span class="reveal-inner delay-1">Optimization</span></span>
+            </h1>
+
+            <div class="cover-subtitle reveal-line">
+              <span class="reveal-inner delay-2">Engineering Web Discoverability, Algorithmic Retrieval &amp; SERP Authority</span>
+            </div>
+          </div>
+
+          <!-- Academic Roster & Institutional Credit Box -->
+          <div class="cover-academic-grid">
+            <div class="academic-block">
+              <span class="label">Course Module</span>
+              <span class="value">Unit IV : SEO</span>
+              <span class="sub-value">Web Tech &amp; Marketing</span>
+            </div>
+            <div class="academic-block">
+              <span class="label">Presented By</span>
+              <span class="value">Ashish &amp; Team</span>
+              <span class="sub-value">Roll No. 42 &bull; IT Dept</span>
+            </div>
+            <div class="academic-block">
+              <span class="label">Faculty Mentor</span>
+              <span class="value">[Mam Name]</span>
+              <span class="sub-value">Assistant Professor, AIT Pune</span>
+            </div>
+            <div class="academic-block">
+              <span class="label">Institution</span>
+              <span class="value">AIT Pune</span>
+              <span class="sub-value">Army Institute of Technology</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-bottom-meta">
+        <div>
+          <button type="button" class="btn-editorial btn-accent" id="startPresentationBtn">
+            <span>START PRESENTATION</span>
+            <span>&rarr;</span>
+          </button>
+        </div>
+        <div class="mono-xs">USE ARROW KEYS &bull; SPACE &bull; PAGE DOWN &bull; PRESS F FOR FULLSCREEN</div>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 02: WHAT IS SEO? (ORGANIC vs PAID ECONOMICS)
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-2" aria-labelledby="slide2-heading">
+      <div class="slide-watermark" aria-hidden="true">02</div>
+      <div class="slide-top-meta">
+        <span class="slide-category-tag">Foundational Concept</span>
+        <span class="slide-index-label">CHAPTER 02 / 08</span>
+      </div>
+
+      <div class="slide-content-stage">
+        <div class="editorial-grid-asym-left">
+          <div>
+            <span class="meta-chip mono-xs" style="margin-bottom: 0.5rem;">CORE PRINCIPLE</span>
+            <h2 id="slide2-heading">
+              <span class="reveal-line"><span class="reveal-inner">What is SEO?</span></span>
+              <span class="reveal-line"><span class="reveal-inner delay-1">Organic vs. Paid Search</span></span>
+            </h2>
+
+            <div class="executive-callout">
+              &ldquo;SEO is the engineering practice of optimizing website code, content, and architecture to earn top unpaid rankings on search engine results pages (SERPs).&rdquo;
+            </div>
+
+            <p class="lead">
+              While paid advertising (PPC) stops delivering traffic the instant budgets run out, organic SEO builds permanent algorithmic equity with zero marginal cost per click.
+            </p>
+          </div>
+
+          <div>
+            <div class="concept-definition-box">
+              <div class="mono-xs" style="color: var(--accent-text); margin-bottom: 0.4rem; font-weight: 700;">STRATEGIC COMPARISON</div>
+              <h3 style="margin-bottom: 0.5rem;">Organic SEO vs. Paid Advertising (PPC)</h3>
+
+              <table class="comparison-table" aria-label="Organic vs Paid Search Comparison">
+                <thead>
+                  <tr>
+                    <th scope="col">Dimension</th>
+                    <th scope="col">Organic SEO</th>
+                    <th scope="col">Paid Ads (PPC)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>Cost per Click</strong></td>
+                    <td><strong>$0.00</strong> (Earned asset)</td>
+                    <td>$2.00 &ndash; $50.00+ per click</td>
+                  </tr>
+                  <tr>
+                    <td><strong>User Trust</strong></td>
+                    <td><strong>~70% of all clicks</strong>; high credibility</td>
+                    <td>~30% of clicks; ad blindness friction</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Longevity</strong></td>
+                    <td><strong>Compounding traffic</strong> over years</td>
+                    <td>Traffic stops instantly when budget halts</td>
+                  </tr>
+                  <tr>
+                    <td><strong>Mechanism</strong></td>
+                    <td>Relevance, PageRank &amp; Speed</td>
+                    <td>Real-time auction bidding</td>
+                  </tr>
+                </tbody>
+              </table>
+
+              <div class="metric-card-row">
+                <div class="metric-pill-card">
+                  <span class="num">14.6%</span>
+                  <span class="title">Lead Close Rate</span>
+                  <span class="mono-xs" style="color: var(--ink-faint);">vs 1.7% outbound</span>
+                </div>
+                <div class="metric-pill-card">
+                  <span class="num">68%</span>
+                  <span class="title">Digital Journeys</span>
+                  <span class="mono-xs" style="color: var(--ink-faint);">Begin with search</span>
+                </div>
+                <div class="metric-pill-card">
+                  <span class="num">10x</span>
+                  <span class="title">Long-Term ROI</span>
+                  <span class="mono-xs" style="color: var(--ink-faint);">Over paid ads</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-bottom-meta">
+        <span>CORE ECONOMIC PILLARS: SUSTAINABILITY &bull; CREDIBILITY &bull; ZERO MARGINAL COST</span>
+        <span>AIT PUNE &bull; UNIT IV</span>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 03: HOW SEARCH ENGINES WORK (ANIMATED PIPELINE)
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-3" aria-labelledby="slide3-heading">
+      <div class="slide-watermark" aria-hidden="true">03</div>
+      <div class="slide-top-meta">
+        <span class="slide-category-tag">Search Engine Mechanics</span>
+        <span class="slide-index-label">CHAPTER 03 / 08</span>
+      </div>
+
+      <div class="slide-content-stage">
+        <div style="margin-bottom: 1rem;">
+          <h2 id="slide3-heading">
+            <span class="reveal-line"><span class="reveal-inner">How Search Engines Work:</span></span>
+            <span class="reveal-line"><span class="reveal-inner delay-1"><span class="italic-accent">Crawling &rarr; Indexing &rarr; Ranking</span></span></span>
+          </h2>
+          <p>
+            Google does not search the live web in real time. It queries a massive proprietary database called the <strong>Inverted Index</strong>, populated by automated web spiders and sorted by multivariant scoring algorithms.
+          </p>
+        </div>
+
+        <div class="pipeline-dashboard">
+          <div class="pipeline-controls">
+            <div class="pipeline-stepper-btns">
+              <button type="button" class="btn-editorial" id="pipeBtnCrawl">1. Crawling</button>
+              <button type="button" class="btn-editorial" id="pipeBtnIndex">2. Indexing</button>
+              <button type="button" class="btn-editorial" id="pipeBtnRank">3. Ranking</button>
+              <button type="button" class="btn-editorial btn-accent" id="pipeBtnAuto">&#9654; Auto Run</button>
+            </div>
+
+            <div class="mono-xs" id="pipelineLiveStatus">
+              <strong>PHASE 1 (CRAWLING):</strong> Googlebot spider parses sitemap &amp; traverses hyperlinked web graph, downloading HTML payload.
+            </div>
+          </div>
+
+          <div class="pipeline-stage-visual">
+            <!-- Stage 1: Crawl -->
+            <div class="pipeline-stage-column active" id="pipeColCrawl">
+              <div class="pipeline-stage-badge">STAGE 01 &bull; DISCOVERY</div>
+              <h3 style="font-size: 1.3rem; margin-bottom: 0.2rem;">Crawling (Bots)</h3>
+              <p style="font-size: var(--text-xs); color: var(--ink-muted);">Googlebot traversing hyperlink graph</p>
+              
+              <div class="stage-illustration-wrap">
+                <svg id="spiderBotSvg" class="spider-bot-svg" width="85" height="85" viewBox="0 0 100 100" role="img" aria-label="Spider Bot Crawler Diagram">
+                  <title>Googlebot Crawler Diagram</title>
+                  <circle cx="50" cy="50" r="18" fill="#F8FAFC" stroke="#0F172A" stroke-width="2.5"/>
+                  <circle cx="50" cy="46" r="6" fill="#FF5416"/>
+                  <path d="M44 32 L38 20 M56 32 L62 20" stroke="#0F172A" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M34 42 L18 36 L10 46" stroke="#0F172A" stroke-width="2" fill="none"/>
+                  <path d="M32 50 L14 50 L6 62" stroke="#0F172A" stroke-width="2" fill="none"/>
+                  <path d="M34 58 L18 64 L12 76" stroke="#0F172A" stroke-width="2" fill="none"/>
+                  <path d="M66 42 L82 36 L90 46" stroke="#0F172A" stroke-width="2" fill="none"/>
+                  <path d="M68 50 L86 50 L94 62" stroke="#0F172A" stroke-width="2" fill="none"/>
+                  <path d="M66 58 L82 64 L88 76" stroke="#0F172A" stroke-width="2" fill="none"/>
+                  <path d="M46 56 L35 88 M54 56 L65 88" stroke="#FF5416" stroke-width="1.5" stroke-dasharray="3 3"/>
+                </svg>
+              </div>
+
+              <div class="mono-xs" style="text-align: left; margin-top: auto; width: 100%; border-top: 1px solid var(--border-subtle); padding-top: 0.5rem;">
+                &bull; Reads <code>robots.txt</code><br>
+                &bull; Queries <code>sitemap.xml</code><br>
+                &bull; Traverses all <code>&lt;a href&gt;</code> links
+              </div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+
+            <!-- Stage 2: Index -->
+            <div class="pipeline-stage-column" id="pipeColIndex">
+              <div class="pipeline-stage-badge">STAGE 02 &bull; STORAGE</div>
+              <h3 style="font-size: 1.3rem; margin-bottom: 0.2rem;">Indexing (Database)</h3>
+              <p style="font-size: var(--text-xs); color: var(--ink-muted);">Inverted Index tokenization</p>
+
+              <div class="stage-illustration-wrap">
+                <svg id="indexDbSvg" class="index-db-svg" width="85" height="85" viewBox="0 0 100 100" role="img" aria-label="Inverted Index Database Diagram">
+                  <title>Inverted Index Database Diagram</title>
+                  <ellipse cx="50" cy="28" rx="30" ry="12" fill="#F8FAFC" stroke="#0F172A" stroke-width="2.5"/>
+                  <path d="M20 28 v40 c0 7 14 12 30 12 s30 -5 30 -12 v-40" fill="none" stroke="#0F172A" stroke-width="2.5"/>
+                  <path d="M20 48 c0 7 14 12 30 12 s30 -5 30 -12" fill="none" stroke="#0F172A" stroke-width="1.5" stroke-dasharray="2 2"/>
+                  <rect x="36" y="38" width="28" height="6" fill="#FF5416" rx="1"/>
+                  <rect x="30" y="56" width="40" height="6" fill="#0F172A" rx="1"/>
+                  <rect x="34" y="66" width="32" height="6" fill="#FF5416" rx="1"/>
+                </svg>
+              </div>
+
+              <div class="mono-xs" style="text-align: left; margin-top: auto; width: 100%; border-top: 1px solid var(--border-subtle); padding-top: 0.5rem;">
+                &bull; Parses HTML tags &amp; schema<br>
+                &bull; Extracts text tokens &amp; entities<br>
+                &bull; De-duplicates canonical URLs
+              </div>
+            </div>
+
+            <div class="pipeline-arrow" aria-hidden="true">&rarr;</div>
+
+            <!-- Stage 3: Rank -->
+            <div class="pipeline-stage-column" id="pipeColRank">
+              <div class="pipeline-stage-badge">STAGE 03 &bull; ALGORITHM</div>
+              <h3 style="font-size: 1.3rem; margin-bottom: 0.2rem;">Ranking (SERP)</h3>
+              <p style="font-size: var(--text-xs); color: var(--ink-muted);">200+ signals compute position</p>
+
+              <div class="stage-illustration-wrap">
+                <svg id="rankStackSvg" width="85" height="85" viewBox="0 0 100 100" role="img" aria-label="SERP Ranking Podium Diagram">
+                  <title>SERP Ranking Podium Diagram</title>
+                  <rect x="36" y="24" width="28" height="64" fill="#F8FAFC" stroke="#0F172A" stroke-width="2.5" rx="3"/>
+                  <text x="50" y="44" font-family="'JetBrains Mono', monospace" font-size="14" font-weight="700" fill="#FF5416" text-anchor="middle">#1</text>
+                  <rect x="12" y="42" width="24" height="46" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" rx="3"/>
+                  <text x="24" y="58" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#0F172A" text-anchor="middle">#2</text>
+                  <rect x="64" y="54" width="24" height="34" fill="#F8FAFC" stroke="#0F172A" stroke-width="2" rx="3"/>
+                  <text x="76" y="70" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#0F172A" text-anchor="middle">#3</text>
+                </svg>
+              </div>
+
+              <div class="mono-xs" style="text-align: left; margin-top: auto; width: 100%; border-top: 1px solid var(--border-subtle); padding-top: 0.5rem;">
+                &bull; User Search Intent Matching<br>
+                &bull; PageRank &amp; Inbound Authority<br>
+                &bull; Core Web Vitals &amp; Mobile UX
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-bottom-meta">
+        <span>GLOSSARY: GOOGLEBOT &bull; INVERTED INDEX &bull; ALGORITHM &bull; SERP</span>
+        <span>INTERACTIVE STEPPED SIMULATION</span>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 04: ON-PAGE SEO (CODE & CONTENT ARCHITECTURE)
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-4" aria-labelledby="slide4-heading">
+      <div class="slide-watermark" aria-hidden="true">04</div>
+      <div class="slide-top-meta">
+        <span class="slide-category-tag">On-Page Architecture</span>
+        <span class="slide-index-label">CHAPTER 04 / 08</span>
+      </div>
+
+      <div class="slide-content-stage">
+        <div style="margin-bottom: 1.25rem;">
+          <h2 id="slide4-heading">
+            <span class="reveal-line"><span class="reveal-inner">On-Page SEO:</span></span>
+            <span class="reveal-line"><span class="reveal-inner delay-1">Content &amp; Semantic HTML Architecture</span></span>
+          </h2>
+          <p>
+            On-page optimization covers every factor within your direct codebase and content control. It ensures search bots can instantly parse context, hierarchy, and relevance.
+          </p>
+        </div>
+
+        <div class="feature-checklist-grid">
+          <!-- Card 1 -->
+          <article class="feature-check-card">
+            <div class="card-head">
+              <span class="meta-chip accent mono-xs">&lt;head&gt; METADATA</span>
+              <span class="mono-xs" style="color: var(--ink-faint);">50&ndash;60 CHARS</span>
+            </div>
+            <h3>1. Title Tag &amp; Meta Description</h3>
+            <ul>
+              <li><strong>&lt;title&gt;:</strong> Primary relevance anchor. Place primary keyword at start.</li>
+              <li><strong>&lt;meta name="description"&gt;:</strong> 150&ndash;160 chars; acts as organic ad copy in SERPs to drive CTR.</li>
+            </ul>
+          </article>
+
+          <!-- Card 2 -->
+          <article class="feature-check-card">
+            <div class="card-head">
+              <span class="meta-chip mono-xs">SEMANTIC DOM</span>
+              <span class="mono-xs" style="color: var(--accent-text);">STRICTLY 1 H1</span>
+            </div>
+            <h3>2. Heading Hierarchy (&lt;h1&gt;&ndash;&lt;h3&gt;)</h3>
+            <ul>
+              <li><strong>Single &lt;h1&gt;:</strong> Defines the core topic of the document for crawlers.</li>
+              <li><strong>Nested &lt;h2&gt; and &lt;h3&gt;:</strong> Logical subsections allowing search engines to index individual passage snippets.</li>
+            </ul>
+          </article>
+
+          <!-- Card 3 -->
+          <article class="feature-check-card">
+            <div class="card-head">
+              <span class="meta-chip mono-xs">ACCESSIBILITY</span>
+              <span class="mono-xs" style="color: var(--ink-faint);">ALT ATTRIBUTES</span>
+            </div>
+            <h3>3. Image Optimization &amp; Alt Text</h3>
+            <ul>
+              <li><strong>Descriptive Alt:</strong> Enables Google Images indexing and screen reader accessibility.</li>
+              <li><strong>Modern Formats:</strong> Serve lightweight WebP / AVIF with explicit width and height to prevent layout shifts.</li>
+            </ul>
+          </article>
+
+          <!-- Card 4 -->
+          <article class="feature-check-card">
+            <div class="card-head">
+              <span class="meta-chip mono-xs">URL &amp; LINKS</span>
+              <span class="mono-xs" style="color: var(--ink-faint);">SLUG HYGIENE</span>
+            </div>
+            <h3>4. URLs &amp; Internal Linking</h3>
+            <ul>
+              <li><strong>Clean Slugs:</strong> Semantic paths (e.g., <code>/seo/on-page</code> instead of <code>?id=9214</code>).</li>
+              <li><strong>Internal Link Architecture:</strong> Contextual anchor text passes PageRank link equity across your domain.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+
+      <div class="slide-bottom-meta">
+        <span>ON-PAGE AUDIT CHECKLIST: TITLE &bull; H1 &bull; META DESC &bull; ALT TEXT &bull; INTERNAL LINKS</span>
+        <span>AIT PUNE</span>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 05: TECHNICAL SEO & CORE WEB VITALS
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-5" aria-labelledby="slide5-heading">
+      <div class="slide-watermark" aria-hidden="true">05</div>
+      <div class="slide-top-meta">
+        <span class="slide-category-tag">Infrastructure &amp; Speed</span>
+        <span class="slide-index-label">CHAPTER 05 / 08</span>
+      </div>
+
+      <div class="slide-content-stage">
+        <div style="margin-bottom: 1.25rem;">
+          <h2 id="slide5-heading">
+            <span class="reveal-line"><span class="reveal-inner">Technical SEO &amp;</span></span>
+            <span class="reveal-line"><span class="reveal-inner delay-1">Google Core Web Vitals</span></span>
+          </h2>
+          <p>
+            Technical SEO provides the infrastructure ensuring bots can discover, crawl, and render your website with blazing performance and zero UX friction.
+          </p>
+        </div>
+
+        <div class="feature-checklist-grid">
+          <!-- Card 1: Crawl Directives -->
+          <article class="feature-check-card">
+            <div class="card-head">
+              <span class="meta-chip accent mono-xs">CRAWL DIRECTIVES</span>
+              <span class="mono-xs" style="color: var(--ink-faint);">ROOT DIRECTORY</span>
+            </div>
+            <h3>1. robots.txt &amp; XML Sitemaps</h3>
+            <ul>
+              <li><strong>robots.txt:</strong> Tells crawlers which routes to allow or disallow, preserving crawl budget.</li>
+              <li><strong>sitemap.xml:</strong> An XML map listing all canonical URLs, priority, and last modification dates.</li>
+            </ul>
+          </article>
+
+          <!-- Card 2: Canonicalization -->
+          <article class="feature-check-card">
+            <div class="card-head">
+              <span class="meta-chip mono-xs">DUPLICATE DEFENSE</span>
+              <span class="mono-xs" style="color: var(--accent-text);">REL="CANONICAL"</span>
+            </div>
+            <h3>2. Canonical Tags &amp; HTTPS Security</h3>
+            <ul>
+              <li><strong>Canonical Link:</strong> Self-referencing <code>&lt;link rel="canonical"&gt;</code> prevents duplicate content penalties.</li>
+              <li><strong>HTTPS Encryption:</strong> Mandatory SSL certificate; non-secure HTTP sites are demoted by Google.</li>
+            </ul>
+          </article>
+
+          <!-- Card 3: Core Web Vitals -->
+          <article class="feature-check-card" style="grid-column: span 2;">
+            <div class="card-head">
+              <span class="meta-chip success mono-xs">OFFICIAL GOOGLE RANKING SIGNALS</span>
+              <span class="mono-xs" style="color: var(--ink-faint);">PAGE EXPERIENCE</span>
+            </div>
+            <h3>3. Google Core Web Vitals (The UX Triad)</h3>
+
+            <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; margin-top: 0.5rem;">
+              <div style="background: var(--paper); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 0.85rem;">
+                <div class="mono-xs" style="color: var(--accent-text); font-weight: 700;">LCP &bull; LOADING</div>
+                <div style="font-size: 1.1rem; font-weight: 700; margin: 0.2rem 0;">&lt; 2.5 seconds</div>
+                <p style="font-size: var(--text-xs); color: var(--ink-muted); margin: 0;">Largest Contentful Paint: Measures when the primary content element has loaded.</p>
+              </div>
+
+              <div style="background: var(--paper); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 0.85rem;">
+                <div class="mono-xs" style="color: var(--accent-text); font-weight: 700;">INP &bull; INTERACTION</div>
+                <div style="font-size: 1.1rem; font-weight: 700; margin: 0.2rem 0;">&lt; 200 milliseconds</div>
+                <p style="font-size: var(--text-xs); color: var(--ink-muted); margin: 0;">Interaction to Next Paint: Measures UI responsiveness to user clicks and taps.</p>
+              </div>
+
+              <div style="background: var(--paper); border: 1px solid var(--border-subtle); border-radius: 6px; padding: 0.85rem;">
+                <div class="mono-xs" style="color: var(--accent-text); font-weight: 700;">CLS &bull; STABILITY</div>
+                <div style="font-size: 1.1rem; font-weight: 700; margin: 0.2rem 0;">&lt; 0.1 score</div>
+                <p style="font-size: var(--text-xs); color: var(--ink-muted); margin: 0;">Cumulative Layout Shift: Ensures zero unexpected visual layout jumps during load.</p>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="slide-bottom-meta">
+        <span>TECHNICAL STACK: ROBOTS.TXT &bull; SITEMAP.XML &bull; LCP &bull; INP &bull; CLS &bull; HTTPS</span>
+        <span>AIT PUNE</span>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 06: OFF-PAGE SEO & AUTHORITY BUILDING
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-6" aria-labelledby="slide6-heading">
+      <div class="slide-watermark" aria-hidden="true">06</div>
+      <div class="slide-top-meta">
+        <span class="slide-category-tag">Authority &amp; Ethics</span>
+        <span class="slide-index-label">CHAPTER 06 / 08</span>
+      </div>
+
+      <div class="slide-content-stage">
+        <div>
+          <h2 id="slide6-heading">
+            <span class="reveal-line"><span class="reveal-inner">Off-Page SEO &amp; Authority:</span></span>
+            <span class="reveal-line"><span class="reveal-inner delay-1">PageRank, Backlinks &amp; The Hat Spectrum</span></span>
+          </h2>
+          <p>
+            Off-page SEO builds domain authority through external validation. Hyperlinks act as peer-reviewed votes of confidence in Google's mathematical PageRank algorithm.
+          </p>
+        </div>
+
+        <div class="hat-spectrum-grid">
+          <!-- White Hat -->
+          <article class="hat-card white-hat">
+            <div>
+              <div class="mono-xs" style="color: #059669; font-weight: 700;">100% ETHICAL &bull; SUSTAINABLE</div>
+              <h3 style="margin: 0.25rem 0;">White Hat SEO</h3>
+              <p style="font-size: var(--text-xs); color: var(--ink-muted);">
+                Strict adherence to Google Search Essentials. Focuses on genuine human value and performance.
+              </p>
+
+              <ul class="hat-tactics-list">
+                <li>High-value original research</li>
+                <li>Fast performance &amp; Core Web Vitals</li>
+                <li>Descriptive semantic HTML markup</li>
+                <li>Natural editorial backlink acquisition</li>
+              </ul>
+            </div>
+
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.6rem; margin-top: auto;">
+              <span class="meta-chip success mono-xs">ZERO PENALTY RISK &bull; RESILIENT</span>
+            </div>
+          </article>
+
+          <!-- Grey Hat -->
+          <article class="hat-card grey-hat">
+            <div>
+              <div class="mono-xs" style="color: var(--ink-faint); font-weight: 700;">50% RISK &bull; AMBIGUOUS</div>
+              <h3 style="margin: 0.25rem 0;">Grey Hat SEO</h3>
+              <p style="font-size: var(--text-xs); color: var(--ink-muted);">
+                Tactics that exploit algorithmic loopholes. Fragile and highly vulnerable to Google core updates.
+              </p>
+
+              <ul class="hat-tactics-list">
+                <li>Buying expired domains for 301 redirects</li>
+                <li>Aggressive internal link sculpting</li>
+                <li>Clickbait titles with topical drift</li>
+                <li>Paid reviews without explicit nofollow</li>
+              </ul>
+            </div>
+
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.6rem; margin-top: auto;">
+              <span class="meta-chip mono-xs">SHORT-LIVED GAINS &bull; AUDIT RISKS</span>
+            </div>
+          </article>
+
+          <!-- Black Hat -->
+          <article class="hat-card black-hat">
+            <div>
+              <div class="mono-xs" style="color: var(--accent-text); font-weight: 700;">0% SAFETY &bull; BANNED</div>
+              <h3 style="margin: 0.25rem 0;">Black Hat SEO</h3>
+              <p style="font-size: var(--text-xs); color: var(--ink-muted);">
+                Deceptive manipulation of search engines. Triggers immediate algorithmic demotion or permanent manual de-indexing.
+              </p>
+
+              <ul class="hat-tactics-list">
+                <li>Keyword stuffing &amp; hidden CSS text</li>
+                <li>Cloaking (showing bots different content)</li>
+                <li>Private Blog Networks (PBNs) &amp; link farms</li>
+                <li>Automated scraped spam content</li>
+              </ul>
+            </div>
+
+            <div style="border-top: 1px solid var(--border-subtle); padding-top: 0.6rem; margin-top: auto;">
+              <span class="meta-chip accent mono-xs">MANUAL ACTION &bull; TOTAL DE-INDEXING</span>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="slide-bottom-meta">
+        <span>AUTHORITY GRAPH: PAGERANK &bull; DOFOLLOW BACKLINKS &bull; DOMAIN AUTHORITY (DA)</span>
+        <span>AIT PUNE</span>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 07: LIVE CASE STUDY & AUDITING (SERP CLIMB + LIGHTHOUSE)
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-7" aria-labelledby="slide7-heading">
+      <div class="slide-watermark" aria-hidden="true">07</div>
+      <div class="slide-top-meta">
+        <span class="slide-category-tag">Live Case Study</span>
+        <span class="slide-index-label">CHAPTER 07 / 08</span>
+      </div>
+
+      <div class="slide-content-stage">
+        <div style="margin-bottom: 1rem;">
+          <h2 id="slide7-heading">
+            <span class="reveal-line"><span class="reveal-inner">Live Case Study &amp; Auditing:</span></span>
+            <span class="reveal-line"><span class="reveal-inner delay-1"><span class="italic-accent">Watch Our Website Climb to Rank #1</span></span></span>
+          </h2>
+          <p>
+            Experience live optimization: As each technical and on-page checklist item is completed below, watch the website climb the Google SERP in real time!
+          </p>
+        </div>
+
+        <div class="serp-simulation-container">
+          <!-- Left: 8-Factor Checklist -->
+          <div class="checklist-box">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.5rem;">
+              <span class="mono-xs" style="color: var(--accent-text); font-weight: 700;">OPTIMIZATION CHECKLIST</span>
+              <span class="mono-xs">CLICK ITEMS TO CLIMB</span>
+            </div>
+
+            <ul class="interactive-checklist">
+              <li>
+                <label class="check-item-label">
+                  <input type="checkbox" class="check-item-input serp-checklist-input" checked>
+                  <span class="check-box-custom">&#10003;</span>
+                  <span>1. High-Value, Original Content Matching Intent</span>
+                </label>
+              </li>
+              <li>
+                <label class="check-item-label">
+                  <input type="checkbox" class="check-item-input serp-checklist-input" checked>
+                  <span class="check-box-custom">&#10003;</span>
+                  <span>2. Optimized Title Tag &amp; Meta Description</span>
+                </label>
+              </li>
+              <li>
+                <label class="check-item-label">
+                  <input type="checkbox" class="check-item-input serp-checklist-input" checked>
+                  <span class="check-box-custom">&#10003;</span>
+                  <span>3. Blazing Core Web Vitals (LCP &lt; 2.5s)</span>
+                </label>
+              </li>
+              <li>
+                <label class="check-item-label">
+                  <input type="checkbox" class="check-item-input serp-checklist-input">
+                  <span class="check-box-custom">&#10003;</span>
+                  <span>4. Mobile-First Responsive Design (Zero CLS)</span>
+                </label>
+              </li>
+              <li>
+                <label class="check-item-label">
+                  <input type="checkbox" class="check-item-input serp-checklist-input">
+                  <span class="check-box-custom">&#10003;</span>
+                  <span>5. HTTPS Secure Protocol &amp; Valid SSL</span>
+                </label>
+              </li>
+              <li>
+                <label class="check-item-label">
+                  <input type="checkbox" class="check-item-input serp-checklist-input">
+                  <span class="check-box-custom">&#10003;</span>
+                  <span>6. Schema.org JSON-LD Structured Data</span>
+                </label>
+              </li>
+              <li>
+                <label class="check-item-label">
+                  <input type="checkbox" class="check-item-input serp-checklist-input">
+                  <span class="check-box-custom">&#10003;</span>
+                  <span>7. Internal Link Graph &amp; Keyword Anchors</span>
+                </label>
+              </li>
+              <li>
+                <label class="check-item-label">
+                  <input type="checkbox" class="check-item-input serp-checklist-input">
+                  <span class="check-box-custom">&#10003;</span>
+                  <span>8. Authoritative Inbound Editorial Backlinks</span>
+                </label>
+              </li>
+            </ul>
+
+            <div style="margin-top: 0.85rem; border-top: 1px solid var(--border-subtle); padding-top: 0.65rem; display: flex; justify-content: space-between; align-items: center;">
+              <span class="mono-xs">ESTIMATED CTR GAIN:</span>
+              <span class="mono" id="projectedCtrValue" style="color: var(--accent-text); font-weight: 700; font-size: var(--text-base);">4.8%</span>
+            </div>
+          </div>
+
+          <!-- Right: Live Mock SERP Ladder -->
+          <div class="mock-serp-container">
+            <div class="mock-serp-header">
+              <span class="mono-xs" style="color: var(--ink-muted);">GOOGLE SEARCH &bull; DESKTOP VIEWPORT</span>
+              <span class="mono-xs" style="color: var(--accent-text); font-weight: 700;">CURRENT RANK: <span id="liveSerpRank">#6</span></span>
+            </div>
+
+            <div id="mockSerpList" style="display: flex; flex-direction: column; gap: 0.65rem;">
+              <div class="mock-serp-item">
+                <span class="mono-xs" style="color: #0E6923;">https://en.wikipedia.org &rsaquo; wiki &rsaquo; Search_engine_optimization</span>
+                <div style="color: #1a0dab; font-size: 1rem; font-weight: 600; text-decoration: underline;">Search engine optimization - Wikipedia</div>
+                <p style="font-size: var(--text-xs); color: #545454; margin: 0.2rem 0 0 0;">Search engine optimization (SEO) is the process of improving the quality and quantity of website traffic...</p>
+              </div>
+
+              <!-- TARGET WEBSITE BEING OPTIMIZED -->
+              <div class="mock-serp-item target-website" id="targetSerpItem">
+                <span class="serp-rank-badge">TARGET SITE</span>
+                <span class="mono-xs" style="color: #0E6923;">https://seo-unit4.aitpune.edu</span>
+                <div style="color: #1a0dab; font-size: 1.05rem; font-weight: 700; text-decoration: underline;">Search Engine Optimization (SEO) Guide | AIT Pune Unit IV</div>
+                <p style="font-size: var(--text-xs); color: #545454; margin: 0.2rem 0 0 0;">
+                  Comprehensive academic lecture on web search algorithms, crawling bots, inverted index databases, and live DOM auditing.
+                </p>
+                <div style="display: flex; gap: 0.5rem; margin-top: 0.4rem;">
+                  <span class="meta-chip mono-xs" style="padding: 0.1rem 0.35rem; font-size: 9px;">SITEMAP.XML</span>
+                  <span class="meta-chip mono-xs" style="padding: 0.1rem 0.35rem; font-size: 9px;">JSON-LD SCHEMA</span>
+                  <span class="meta-chip accent mono-xs" style="padding: 0.1rem 0.35rem; font-size: 9px;">100 LIGHTHOUSE</span>
+                </div>
+              </div>
+
+              <div class="mock-serp-item">
+                <span class="mono-xs" style="color: #0E6923;">https://developers.google.com &rsaquo; search &rsaquo; docs</span>
+                <div style="color: #1a0dab; font-size: 1rem; font-weight: 600; text-decoration: underline;">Google Search Essentials (formerly Webmaster Guidelines)</div>
+                <p style="font-size: var(--text-xs); color: #545454; margin: 0.2rem 0 0 0;">The core parts of what makes your web content eligible to appear in Google Search...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 Circular Score Rings -->
+        <div class="audit-rings-grid" role="region" aria-label="Lighthouse Score Rings">
+          <div class="ring-card">
+            <div class="svg-circle-wrap">
+              <svg width="90" height="90" viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="45" class="circle-bg"/>
+                <circle cx="50" cy="50" r="45" class="circle-progress"/>
+              </svg>
+              <div class="circle-center-text" id="lhPerfScore">100</div>
+            </div>
+            <div class="mono" style="font-weight: 700; font-size: var(--text-sm);">PERFORMANCE</div>
+            <span class="mono-xs" style="color: var(--ink-faint);">0.0s Layout Shift &bull; TTFB &lt; 20ms</span>
+          </div>
+
+          <div class="ring-card">
+            <div class="svg-circle-wrap">
+              <svg width="90" height="90" viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="45" class="circle-bg"/>
+                <circle cx="50" cy="50" r="45" class="circle-progress"/>
+              </svg>
+              <div class="circle-center-text" id="lhAccScore">100</div>
+            </div>
+            <div class="mono" style="font-weight: 700; font-size: var(--text-sm);">ACCESSIBILITY</div>
+            <span class="mono-xs" style="color: var(--ink-faint);">ARIA Landmarks &bull; Contrast &gt;5.5:1</span>
+          </div>
+
+          <div class="ring-card">
+            <div class="svg-circle-wrap">
+              <svg width="90" height="90" viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="45" class="circle-bg"/>
+                <circle cx="50" cy="50" r="45" class="circle-progress"/>
+              </svg>
+              <div class="circle-center-text" id="lhBpScore">100</div>
+            </div>
+            <div class="mono" style="font-weight: 700; font-size: var(--text-sm);">BEST PRACTICES</div>
+            <span class="mono-xs" style="color: var(--ink-faint);">HTTPS &bull; Preload &bull; Clean Console</span>
+          </div>
+
+          <div class="ring-card">
+            <div class="svg-circle-wrap">
+              <svg width="90" height="90" viewBox="0 0 100 100" aria-hidden="true">
+                <circle cx="50" cy="50" r="45" class="circle-bg"/>
+                <circle cx="50" cy="50" r="45" class="circle-progress"/>
+              </svg>
+              <div class="circle-center-text" id="lhSeoScore">100</div>
+            </div>
+            <div class="mono" style="font-weight: 700; font-size: var(--text-sm);">SEO DISCOVERY</div>
+            <span class="mono-xs" style="color: var(--accent-text);">Canonical &bull; JSON-LD &bull; Single H1</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-bottom-meta">
+        <div>
+          <button type="button" class="btn-editorial btn-accent" id="openXrayCaseStudyBtn">
+            <span>⚡ OPEN SEO X-RAY (PRESS X)</span>
+          </button>
+        </div>
+        <span>LIGHTHOUSE 100/100/100/100 VERIFIED CASE STUDY</span>
+      </div>
+    </section>
+
+    <!-- --------------------------------------------------------------------
+         SLIDE 08: CONCLUSION & KEY TAKEAWAYS
+         -------------------------------------------------------------------- -->
+    <section class="slide-section" id="slide-8" aria-labelledby="slide8-heading">
+      <div class="slide-watermark" aria-hidden="true">08</div>
+      <div class="slide-top-meta">
+        <span class="slide-category-tag">Final Synthesis</span>
+        <span class="slide-index-label">CHAPTER 08 / 08</span>
+      </div>
+
+      <div class="slide-content-stage">
+        <div class="editorial-grid-2col">
+          <div>
+            <span class="meta-chip mono-xs" style="margin-bottom: 0.5rem;">UNIT IV SYNTHESIS</span>
+            <h2 id="slide8-heading">
+              <span class="reveal-line"><span class="reveal-inner">Conclusion:</span></span>
+              <span class="reveal-line"><span class="reveal-inner delay-1">3 Golden Rules of SEO</span></span>
+            </h2>
+
+            <div style="display: flex; flex-direction: column; gap: 0.85rem; margin-top: 1rem;">
+              <div style="border-left: 3.5px solid var(--accent); padding-left: 1rem; background: var(--paper-white); border-radius: 0 8px 8px 0; padding: 0.85rem 1rem;">
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.2rem;">1. Search Intent is King</h3>
+                <p style="font-size: var(--text-sm); margin: 0; color: var(--ink-body);">
+                  Ranking algorithms reward answering exactly what the user sought. Keywords are only vehicles for satisfying underlying human intent.
+                </p>
+              </div>
+
+              <div style="border-left: 3.5px solid var(--ink); padding-left: 1rem; background: var(--paper-white); border-radius: 0 8px 8px 0; padding: 0.85rem 1rem;">
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.2rem;">2. Technical Foundation is Non-Negotiable</h3>
+                <p style="font-size: var(--text-sm); margin: 0; color: var(--ink-body);">
+                  If bots cannot crawl, parse, and render your markup at blazing speed (Core Web Vitals), even world-class content remains invisible.
+                </p>
+              </div>
+
+              <div style="border-left: 3.5px solid #059669; padding-left: 1rem; background: var(--paper-white); border-radius: 0 8px 8px 0; padding: 0.85rem 1rem;">
+                <h3 style="font-size: 1.15rem; margin-bottom: 0.2rem;">3. Authority Compounds Over Time</h3>
+                <p style="font-size: var(--text-sm); margin: 0; color: var(--ink-body);">
+                  Unlike paid ads which vanish the moment funding stops, ethical White Hat optimization builds permanent digital real estate with compounding ROI.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <div class="concept-definition-box" style="text-align: center; padding: 2.25rem 2rem;">
+              <span class="meta-chip accent mono-xs" style="margin-bottom: 0.85rem;">UNIT IV DEFENSE COMPLETE</span>
+              <h3 style="font-size: 2.2rem; font-family: var(--font-display); margin-bottom: 0.4rem;">Thank You &bull; Questions?</h3>
+              <p style="font-size: var(--text-sm); color: var(--ink-muted); margin-bottom: 1.25rem;">
+                Open floor for faculty evaluation and discussion.
+              </p>
+
+              <div style="border-top: 1px solid var(--border-subtle); border-bottom: 1px solid var(--border-subtle); padding: 1.15rem 0; margin-bottom: 1.25rem; display: flex; flex-direction: column; gap: 0.35rem; text-align: left; background: var(--paper-tint); border-radius: 8px; padding-left: 1.25rem; padding-right: 1.25rem;">
+                <div class="mono-xs" style="color: var(--ink-faint);">ACADEMIC AFFILIATION:</div>
+                <div style="font-weight: 700; font-size: var(--text-base);">Army Institute of Technology, Pune</div>
+                <div class="mono-xs" style="color: var(--ink-muted);">Department of Computer Engineering &bull; Information Technology</div>
+                <div class="mono-xs" style="color: var(--accent-text); margin-top: 0.25rem; font-weight: 700;">Presented by: Ashish &amp; Team &bull; Mentor: [Mam Name]</div>
+              </div>
+
+              <div style="display: flex; justify-content: center; gap: 0.75rem; flex-wrap: wrap;">
+                <button type="button" class="btn-editorial" id="restartPresentationBtn">
+                  <span>&#8634; RESTART DECK</span>
+                </button>
+                <button type="button" class="btn-editorial" onclick="window.print()">
+                  <span>&#9113; PRINT / PDF (P)</span>
+                </button>
+                <button type="button" class="btn-editorial btn-accent" onclick="PresentationApp.toggleNavigator(true)">
+                  <span>VIEW ALL 8 SLIDES (M)</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="slide-bottom-meta">
+        <span>ARMY INSTITUTE OF TECHNOLOGY, PUNE &bull; DEPARTMENT OF IT &bull; UNIT IV SEO</span>
+        <span>FINAL CHAPTER 08 / 08</span>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ======================================================================
+       PERSISTENT FLOATING PRESENTER HUD (PROJECTOR CONTROLLER)
+       ====================================================================== -->
+  <aside class="presenter-hud" role="region" aria-label="Presenter Navigation Controls">
+    <button type="button" class="hud-btn" id="hudPrevBtn" title="Previous Slide (← / ↑ / PageUp)" aria-label="Previous Slide">
+      &#8592;
+    </button>
+
+    <div class="hud-counter" aria-live="polite">
+      <span class="current-num" id="hudCurrentSlide">01</span>
+      <span class="total-num"> / <span id="hudTotalSlides">08</span></span>
+    </div>
+
+    <button type="button" class="hud-btn" id="hudNextBtn" title="Next Slide (→ / ↓ / Space / PageDown)" aria-label="Next Slide">
+      &#8594;
+    </button>
+
+    <button type="button" class="hud-btn" id="hudMenuBtn" title="Slide Index (Shortcut: M)" aria-label="Open Slide Index">
+      &#9776;
+    </button>
+
+    <button type="button" class="hud-btn xray-btn-toggle" id="hudXrayBtn" onclick="SeoXray.toggle()" title="Toggle SEO X-Ray (Shortcut: X)" aria-label="Toggle SEO X-Ray">
+      ⚡
+    </button>
+
+    <button type="button" class="hud-btn" id="hudFullscreenBtn" title="Toggle Fullscreen (Shortcut: F)" aria-label="Toggle Fullscreen">
+      &#9974;
+    </button>
+  </aside>
+
+  <!-- Left Bottom Keyboard Shortcut Helper -->
+  <div class="keyboard-hints-chip" aria-hidden="true">
+    <span>NAV: <span class="key-badge">&larr;</span> <span class="key-badge">&rarr;</span> <span class="key-badge">SPACE</span></span>
+    <span>INDEX: <span class="key-badge">M</span></span>
+    <span>X-RAY: <span class="key-badge">X</span></span>
+    <span>FULLSCREEN: <span class="key-badge">F</span></span>
+  </div>
+
+  <!-- ======================================================================
+       SLIDE NAVIGATOR MODAL / INDEX SHEET (PRESS M)
+       ====================================================================== -->
+  <div class="slide-navigator-modal" id="slideNavigatorModal" role="dialog" aria-modal="true" aria-labelledby="navigatorModalTitle">
+    <div class="navigator-card">
+      <div class="navigator-header">
+        <div>
+          <span class="mono-xs" style="color: var(--accent-text); font-weight: 700;">NAVIGATION MATRIX</span>
+          <h3 id="navigatorModalTitle">Presentation Index &bull; 8 Core Chapters</h3>
+        </div>
+        <button type="button" class="btn-editorial" id="closeNavigatorBtn" aria-label="Close Index">
+          <span>CLOSE &times;</span>
+        </button>
+      </div>
+
+      <div class="navigator-grid" id="navigatorGrid">
+        <!-- Injected dynamically by presentation.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================================================================
+       SPECIAL FEATURE: "SEO X-RAY" SIDE HUD DRAWER (PRESS X)
+       ====================================================================== -->
+  <aside class="seo-xray-drawer" id="seoXrayDrawer" role="complementary" aria-label="SEO X-Ray Live DOM Diagnostic Inspector">
+    <div class="xray-drawer-header">
+      <div>
+        <h3>SEO X-Ray Inspector</h3>
+        <span class="mono-xs" style="color: #FF8566;">LIVE DOM TELEMETRY ENGINE</span>
+      </div>
+      <button type="button" class="btn-editorial" id="closeXrayBtn" style="background: var(--paper); color: var(--ink); border: none;" aria-label="Close SEO X-Ray">
+        <span>CLOSE &times;</span>
+      </button>
+    </div>
+
+    <div class="xray-drawer-body">
+      <!-- Group 1: Metadata Diagnostics -->
+      <div class="xray-metric-group">
+        <div class="xray-group-title">
+          <span>HEAD METADATA AUDIT</span>
+          <span class="mono-xs" style="color: #2E7D32;">● VERIFIED</span>
+        </div>
+
+        <div>
+          <div class="xray-stat-row">
+            <span class="xray-stat-label">Document Title:</span>
+            <span class="xray-stat-val optimal" id="xrayTitleChars">59 / 60 chars</span>
+          </div>
+          <div class="char-meter-wrap">
+            <div class="char-meter-fill" id="xrayTitleMeterFill" style="width: 98%;"></div>
+          </div>
+          <div class="xray-tag-preview" id="xrayDocTitle" style="margin-top: 0.4rem;">Reading...</div>
+        </div>
+
+        <div style="margin-top: 0.5rem;">
+          <div class="xray-stat-row">
+            <span class="xray-stat-label">Meta Description:</span>
+            <span class="xray-stat-val optimal" id="xrayDescChars">158 / 160 chars</span>
+          </div>
+          <div class="char-meter-wrap">
+            <div class="char-meter-fill" id="xrayDescMeterFill" style="width: 98%;"></div>
+          </div>
+          <div class="xray-tag-preview" id="xrayDocDesc" style="margin-top: 0.4rem;">Reading...</div>
+        </div>
+
+        <div style="margin-top: 0.5rem;">
+          <span class="xray-stat-label">Canonical Tag:</span>
+          <div class="xray-tag-preview" id="xrayCanonicalUrl">https://seo-unit4.aitpune.edu/</div>
+        </div>
+      </div>
+
+      <!-- Group 2: Semantic HTML Structure -->
+      <div class="xray-metric-group">
+        <div class="xray-group-title">
+          <span>SEMANTIC LANDMARK HIERARCHY</span>
+          <span class="mono-xs" style="color: #2E7D32;">● PASS</span>
+        </div>
+
+        <div class="xray-stat-row">
+          <span class="xray-stat-label">&lt;h1&gt; Count (Must be 1):</span>
+          <span class="xray-stat-val optimal" id="xrayH1Count">1 (Target: Exactly 1)</span>
+        </div>
+
+        <div class="xray-stat-row">
+          <span class="xray-stat-label">&lt;h2&gt; Slide Headings:</span>
+          <span class="xray-stat-val" id="xrayH2Count">7 Headings</span>
+        </div>
+
+        <div class="xray-stat-row">
+          <span class="xray-stat-label">&lt;h3&gt; Subsections:</span>
+          <span class="xray-stat-val" id="xrayH3Count">12 Subsections</span>
+        </div>
+
+        <div class="xray-stat-row">
+          <span class="xray-stat-label">Word Count (Body):</span>
+          <span class="xray-stat-val" id="xrayWordCount">Calculating...</span>
+        </div>
+      </div>
+
+      <!-- Group 3: Media & Schema -->
+      <div class="xray-metric-group">
+        <div class="xray-group-title">
+          <span>ACCESSIBILITY &amp; STRUCTURED DATA</span>
+          <span class="mono-xs" style="color: #2E7D32;">● 100%</span>
+        </div>
+
+        <div class="xray-stat-row">
+          <span class="xray-stat-label">Image &amp; SVG Alt Coverage:</span>
+          <span class="xray-stat-val optimal" id="xrayAltCoverage">100% (Audited)</span>
+        </div>
+
+        <div class="xray-stat-row">
+          <span class="xray-stat-label">JSON-LD Schema Type:</span>
+          <span class="xray-stat-val" id="xraySchemaType">TechArticle, Course, EducationalOrg</span>
+        </div>
+
+        <div class="xray-stat-row">
+          <span class="xray-stat-label">Internal Navigation Anchors:</span>
+          <span class="xray-stat-val" id="xrayInternalLinks">Calculating...</span>
+        </div>
+
+        <div class="xray-stat-row">
+          <span class="xray-stat-label">External Citations:</span>
+          <span class="xray-stat-val" id="xrayExternalLinks">Calculating...</span>
+        </div>
+      </div>
+
+      <!-- Group 4: Classroom Demo Instructions -->
+      <div style="background: var(--paper-tint); border: 1px solid var(--border-subtle); border-radius: 8px; padding: 1rem;">
+        <span class="mono-xs" style="color: var(--accent-text); font-weight: 700;">DEMO TIP FOR TEACHER:</span>
+        <p style="font-size: var(--text-xs); margin: 0.35rem 0 0 0; color: var(--ink-body);">
+          While X-Ray is ON, notice the dashed colored borders on the slide behind this drawer: <strong>Orange dashed boxes</strong> mark H1, <strong>Black dashed boxes</strong> mark H2, and <strong>Alt-text badges</strong> annotate images directly.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- External CDN Libraries (GSAP + ScrollTrigger) with fallback safety -->
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Presentation Application Runtime -->
+  <script defer src="js/presentation.js"></script>
+  <script defer src="js/animations.js"></script>
+  <script defer src="js/interactive.js"></script>
+  <script defer src="js/xray.js"></script>
+</body>
+</html>

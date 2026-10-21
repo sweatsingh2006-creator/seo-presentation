@@ -1,0 +1,155 @@
+/* ==========================================================================
+   TYPOGRAPHY — EXECUTIVE TECHNICAL PRESENTATION SPECIFICATION
+   Fonts: Outfit (Display & Headings), DM Sans (Body), JetBrains Mono (Technical)
+   ========================================================================== */
+
+:root {
+  --font-display: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-mono: 'JetBrains Mono', SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+
+  /* Executive Type Scale */
+  --text-xs: 0.75rem;     /* 12px */
+  --text-sm: 0.875rem;    /* 14px */
+  --text-base: 1.05rem;   /* 16.8px */
+  --text-lg: 1.25rem;     /* 20px */
+  --text-xl: 1.6rem;      /* 25.6px */
+  --text-2xl: 2.2rem;     /* 35.2px */
+  --text-3xl: 3.1rem;     /* 49.6px */
+  --text-display: clamp(3rem, 5.5vw, 5.2rem);
+}
+
+/* Base Body Typesetting */
+body {
+  font-family: var(--font-sans);
+  font-size: var(--text-base);
+  line-height: 1.55;
+  color: var(--ink);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display Headlines */
+h1, h2, h3, .heading-display {
+  font-family: var(--font-display);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+h1 {
+  font-size: var(--text-display);
+  line-height: 0.98;
+  letter-spacing: -0.04em;
+}
+
+h2 {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 1.8vw, 1.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+p {
+  margin: 0 0 0.85rem 0;
+  max-width: 65ch;
+  color: var(--ink-body);
+}
+
+p.lead {
+  font-size: var(--text-lg);
+  line-height: 1.45;
+  color: var(--ink);
+  font-weight: 400;
+}
+
+/* Mono Elements */
+code, pre, .mono, .label-mono, .badge, .slide-counter, .tag {
+  font-family: var(--font-mono);
+  font-feature-settings: 'zero' 1, 'ss01' 1;
+}
+
+.mono-xs {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mono-sm {
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  letter-spacing: 0.04em;
+}
+
+/* Slide Watermark Number */
+.slide-watermark {
+  font-family: var(--font-display);
+  font-size: clamp(5rem, 12vw, 11rem);
+  line-height: 0.8;
+  color: rgba(15, 23, 42, 0.035);
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 800;
+  z-index: 1;
+}
+
+/* Meta Chips & Badges */
+.meta-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.25rem 0.6rem;
+  background: var(--paper-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  white-space: nowrap;
+}
+
+.meta-chip.accent {
+  background: var(--accent);
+  color: #FFFFFF;
+  border-color: var(--accent);
+  font-weight: 700;
+}
+
+.meta-chip.accent-outline {
+  border-color: var(--accent-text);
+  color: var(--accent-text);
+  font-weight: 700;
+}
+
+.meta-chip.success {
+  background: rgba(16, 185, 129, 0.1);
+  color: #065F46;
+  border-color: rgba(16, 185, 129, 0.3);
+  font-weight: 600;
+}
+
+/* Editorial Callout */
+.executive-callout {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2vw, 1.85rem);
+  line-height: 1.3;
+  color: var(--ink);
+  font-weight: 600;
+  border-left: 3.5px solid var(--accent);
+  padding-left: 1.25rem;
+  margin: 1rem 0;
+  letter-spacing: -0.015em;
+}
